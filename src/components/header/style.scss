@@ -1,0 +1,50 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 76%;
+    padding: 4rem 12% 4rem;
+    background-color: rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+
+    .logo {
+        font-size: 3rem;
+        color: $text-color;
+        font-weight: 800;
+        cursor: pointer;
+        transition: .3 ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        span {
+            text-shadow: 0 0 25px $main-color;
+        }
+    }
+
+    .navbar {
+        a {
+            font-size: 1.8rem;
+            color: $text-color;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: .3 ease;
+
+            &:hover, &.active {
+                color: $main-color;
+                border-bottom: 3px solid $main-color;
+            }
+        }
+    }
+
+    #menu-icon {
+        font-size: 3.6rem;
+        color: $main-color;
+        display: none;
+    }
+}

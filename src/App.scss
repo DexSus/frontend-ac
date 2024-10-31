@@ -1,0 +1,12 @@
+@import './styles/variables.scss';
+@import './components/header/style.scss';
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+}
