@@ -2,13 +2,13 @@ import './styles/reset.css'
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Header } from './components/header/index';
+import { LendingPage } from './view/lending/index';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Header/>}/>
+        <Route path="/" element={<LendingPage/>}/>
       </Routes>
     </Router>
   );

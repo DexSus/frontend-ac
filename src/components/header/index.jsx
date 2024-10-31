@@ -10,11 +10,11 @@ export const Header = () => {
       <i class='bx bx-menu' id="menu-icon"></i>
 
       <nav className="navbar">
-        <a href="#Home" className="active">Веб сайт</a>
-        <a href="#FAQ">FAQ</a>
-        <a href="#RoadMap">Road map</a>
-        <a href="#Data">Аналітика</a>
-        <a href="#Form">Подати заявку</a>
+        <a href="#home" className="active">Веб сайт</a>
+        <a href="#faq">FAQ</a>
+        <a href="#roadmap">Road map</a>
+        <a href="#data">Аналітика</a>
+        <a href="#form">Подати заявку</a>
       </nav>
     </header>
   );
