@@ -8,7 +8,8 @@ export const Frame = ( { sourth } ) => {
                 src={sourth} 
                 height="500" 
                 width="500" 
-                frameborder="0">
+                frameborder="0"
+                title="Dash board">
             </iframe>
         </div>
     );
