@@ -1,14 +1,14 @@
 @import './components/style.scss';
 
+.heading {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
 .roadmap {
     padding: 100px 15px;
     background-color: $sec-bg-color;
-
-    .heading {
-        font-size: 8rem;
-        text-align: center;
-        margin: 5rem 0;
-    }
 
     & h2 {
         margin-bottom: 5rem;

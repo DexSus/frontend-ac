@@ -1,0 +1,18 @@
+@import './components/style.scss';
+
+.faq {
+    background-color: $bg-color;
+    color:black;
+
+    & h2 {
+        margin-bottom: 5rem;
+        color: white;
+    }
+
+    .questions-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.5rem;
+        justify-content: center;
+    }
+}
