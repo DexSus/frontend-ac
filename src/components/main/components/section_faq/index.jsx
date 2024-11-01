@@ -1,6 +1,6 @@
 import React from "react";
 
-export const HomeSection = () => {
+export const RoadMapSection = () => {
 
     return(
         <section>

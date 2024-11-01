@@ -1,0 +1,66 @@
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+        padding-right: calc(50% + 30px);
+        text-align: right;
+    }
+
+    &:nth-child(even) {
+        padding-left: calc(50% + 30px);
+    }
+
+    .timeline-dot {
+        height: 21px;
+        width: 21px;
+        background-color: $main-color;
+        box-shadow: 0 0 25px $main-color,
+                    0 0 50px $main-color;
+        position: absolute;
+        left: calc(50% - 8px);
+        border-radius: 50%;
+        top: 10px;
+    }
+
+    .timeline-date {
+        font-size: 20px;
+        font-weight: 800;
+        color: white;
+        margin: 6px 0 15px;
+    }
+
+    .timeline-content {
+        background-color: $bg-color;
+        border: 3px solid $main-color;
+        padding: 30px 50px;
+        border-radius: 4rem;
+        box-shadow: 0 0 10px $main-color;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px $main-color;
+        }
+
+        & h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: white;
+            margin: 0 0 10px;
+        }
+
+        & p {
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+    }
+}

@@ -4,9 +4,24 @@
 html {
     font-size: 60%;
     overflow-x: hidden;
+
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: $bg-color;
     color: $text-color;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $bg-color;
+    width: 50px;
 }

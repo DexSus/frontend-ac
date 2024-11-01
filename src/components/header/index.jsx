@@ -11,8 +11,8 @@ export const Header = () => {
 
       <nav className="navbar">
         <a href="#home" className="active">Веб сайт</a>
-        <a href="#faq">FAQ</a>
         <a href="#roadmap">Road map</a>
+        <a href="#faq">FAQ</a>
         <a href="#data">Аналітика</a>
         <a href="#form">Подати заявку</a>
       </nav>
