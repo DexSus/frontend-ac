@@ -36,7 +36,7 @@ export const FormSection = () => {
                         </div>
                         <div className="input-box">
                             <input type="text" placeholder="Звідки стало відомо" />
-                            <input type="text" placeholder="ФІО особи, що вчинила правопорушення" />
+                            <input type="text" placeholder="Місце, де сталось правопорушення" />
                         </div>
                     </div>
 

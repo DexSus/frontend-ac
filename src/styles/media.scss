@@ -1,0 +1,106 @@
+@media (max-width:1285px) {
+    html {
+        font-size: 55%;
+    }
+
+    .form {
+        padding: 100px 15px 10px 5px;
+        form {
+            .container {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .timeline-items::before {
+        left: 7px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+
+    .timeline-dot {
+        left: 0;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width:895px) {
+    .header {
+        #menu-icon {
+            display: block;
+        }
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background-color: rgba(0, 0, 0 , 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid $main-color;
+        border-bottom: 2px solid $main-color;
+
+        .active {
+            display: block;
+        }
+
+        & a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+            color: white;
+        }
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+
+        .home-content {
+
+            h1 {
+                font-size: 8rem;
+                margin-top: 3rem;
+            }
+
+            h3 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        .home-img img{
+            width: 56vw;
+            height: 56vw;
+        }
+    }
+}
