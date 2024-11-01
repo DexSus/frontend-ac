@@ -13,6 +13,8 @@ export const FAQSection = () => {
                 <QuestionBox title={"Lorem Ipsum 2"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo doloribus repellat aperiam obcaecati consequatur veniam doloremque culpa ipsum iste. Dolorum non iste deserunt error, at laborum sit reiciendis esse!"}/>
                 <QuestionBox title={"Lorem Ipsum 3"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo doloribus repellat aperiam obcaecati consequatur veniam doloremque culpa ipsum iste. Dolorum non iste deserunt error, at laborum sit reiciendis esse!"}/>
                 <QuestionBox title={"Lorem Ipsum 4"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo doloribus repellat aperiam obcaecati consequatur veniam doloremque culpa ipsum iste. Dolorum non iste deserunt error, at laborum sit reiciendis esse!"}/>
+                <QuestionBox title={"Lorem Ipsum 5"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo doloribus repellat aperiam obcaecati consequatur veniam doloremque culpa ipsum iste. Dolorum non iste deserunt error, at laborum sit reiciendis esse!"}/>
+                <QuestionBox title={"Lorem Ipsum 6"} text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente explicabo doloribus repellat aperiam obcaecati consequatur veniam doloremque culpa ipsum iste. Dolorum non iste deserunt error, at laborum sit reiciendis esse!"}/>
 
             </div>
         </section>

@@ -1,0 +1,9 @@
+.frame-container {
+    padding: 3rem 5rem;
+    background-color: $main-color;
+    border-radius: 2rem;
+
+    iframe {
+        border-radius: 2rem;
+    }
+}
