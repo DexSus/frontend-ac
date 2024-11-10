@@ -2,6 +2,7 @@ import React from "react";
 import { AdminHeader } from "./components/adminHeader";
 
 import { Dashboard } from "./components/dashboard";
+import { AccountPanel } from "./components/account";
 
 export const MainPanel = ({ selectedPanel }) => { 
 
@@ -10,11 +11,11 @@ export const MainPanel = ({ selectedPanel }) => {
             case "#Dashboard":
                 return <Dashboard/>;
             case "#AddCase":
-                return <div style={{color: 'black'}}>Add Case Content</div>;
+                return <AccountPanel/>;
             case "#Cabinet":
                 return <div style={{color: 'black'}}>Cabinet Content</div>;
             case "#Account":
-                return <div style={{color: 'black'}}>User Account Content</div>;
+                return <AccountPanel progressValue={70}/>;
             default:
                 return <div style={{color: 'black'}}>Welcome to Admin Panel</div>;
         }
@@ -23,7 +24,9 @@ export const MainPanel = ({ selectedPanel }) => {
     return (
         <main className="mainPanel">
             <AdminHeader />
-            {renderContent()}
+            <div className="container">
+                {renderContent()}
+            </div>
         </main>
     );
 };
