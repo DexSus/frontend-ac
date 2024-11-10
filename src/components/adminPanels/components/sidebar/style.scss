@@ -1,0 +1,56 @@
+.sidebar {
+    color: rgb(103, 106, 138);
+    background-color: white;
+    width: 250px;
+    
+
+    .logo-container {
+        display: flex;
+        border-bottom: 0.1px solid rgb(180, 180, 180);
+        
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        .logo {
+            width: 50px;
+        }
+
+        .text {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    .navbar {
+        
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            
+            li {
+                white-space: nowrap;
+                min-width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+
+                & .nav-btn {
+                    display: flex;
+                    gap: 10px;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    color: #3d5170;
+                    padding: 1.5rem 2rem;
+                }
+
+                .active {
+                    color: rgb(57, 110, 224);
+                    border-left: 5px solid #3d5170;
+                }
+            }
+        }
+    }
+}
