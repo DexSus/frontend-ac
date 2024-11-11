@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import logo from "./images/logo.png";
 
-export const SideBar = ({ onSelectPanel }) => { // Додаємо onSelectPanel як пропс
+export const SideBar = ({ onSelectPanel }) => { 
     const [activeItem, setActiveItem] = useState("#Dashboard"); 
 
     const handleNavClick = (id) => {
         setActiveItem(id);
-        onSelectPanel(id); // Оновлюємо вибір у AdminPanels
+        onSelectPanel(id); 
     };
 
     return (

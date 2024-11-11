@@ -3,6 +3,7 @@ import { AdminHeader } from "./components/adminHeader";
 
 import { Dashboard } from "./components/dashboard";
 import { AccountPanel } from "./components/account";
+import { AddCasePanel } from "./components/addCase";
 
 export const MainPanel = ({ selectedPanel }) => { 
 
@@ -11,7 +12,7 @@ export const MainPanel = ({ selectedPanel }) => {
             case "#Dashboard":
                 return <Dashboard/>;
             case "#AddCase":
-                return <AccountPanel/>;
+                return <AddCasePanel/>;
             case "#Cabinet":
                 return <div style={{color: 'black'}}>Cabinet Content</div>;
             case "#Account":

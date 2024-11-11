@@ -1,0 +1,127 @@
+@import './components/message/style.scss';
+
+.add-case-preview {
+    padding: 2rem;
+
+    & p {
+        letter-spacing: .125rem;
+        color: #818ea3;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    & h1 {
+        color: #3d5170;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.panel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 2rem 0;
+
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 35%;
+        height: 600px;
+        background-color: rgb(246, 244, 244);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        overflow-y: scroll;
+        padding: 2rem;
+        border-radius: 25px 0 0 25px;
+    }
+    
+    .create-case-container {
+        width: 100%;
+        max-width: 40%;
+        max-height: 600px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 0 25px 25px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        color: black;
+        overflow-y: auto;
+
+        h2 {
+            font-size: 2.5rem;
+            color: #3d5170;
+            margin-bottom: 20px;
+            padding: 1rem;
+            border-bottom: 0.1px solid rgb(180, 180, 180);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #3d5170;
+                    margin-bottom: 0.5rem;
+                }
+
+                input,
+                select,
+                textarea {
+                    padding: 0.75rem;
+                    font-size: 1.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #f5f5f5;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #3d5170;
+                        background-color: #fff;
+                    }
+                }
+
+                textarea {
+                    height: 100px;
+                    resize: none;
+                }
+
+                .checkbox-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .submit-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 1.5rem;
+                background-color: #3d5170;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 1.5rem;
+            
+                &:hover {
+                    background-color: #2b3a54;
+                }
+            
+                &:focus {
+                    outline: none;
+                }
+            }
+            
+        }
+    }
+}
