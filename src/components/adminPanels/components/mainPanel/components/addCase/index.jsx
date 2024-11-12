@@ -124,7 +124,7 @@ export const AddCasePanel = () => {
                             <button type="submit" className="submit-button">Відправити</button>
                         </form>
                     ) : (
-                        <p>Оберіть повідомлення для перегляду інформації.</p>
+                        <p className="title">Оберіть повідомлення для реєстрації інциденту.</p>
                     )}
                 </div>
             </div>

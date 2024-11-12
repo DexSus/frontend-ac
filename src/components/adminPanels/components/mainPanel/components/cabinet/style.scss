@@ -1,0 +1,19 @@
+.account-preview {
+    padding: 2rem;
+
+    & p {
+        letter-spacing: .125rem;
+        color: #818ea3;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    & h1 {
+        color: #3d5170;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+}
