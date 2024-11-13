@@ -23,13 +23,10 @@ export const HomeSection = () => {
                 </div>
 
                 <div className="btn-group">
-                    <a href="#roadmap" className="btn">Road Map</a>
-                    <a href="#form" className="btn">Заявити</a>
+                    <a href="#form" className="btn">Повідомити про корупцію</a>
                 </div>
             </div>
-            <div className="home-img">
-                <img src={ HomePageImg } alt=""/>
-            </div>
+            
         </section>
     );
 }

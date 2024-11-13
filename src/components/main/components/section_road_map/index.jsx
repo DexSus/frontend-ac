@@ -6,7 +6,7 @@ export const RoadMapSection = () => {
 
     return(
         <section className="roadmap" id="roadmap">
-            <h2 className="heading">Роад Мапа обробки доносів</h2>
+            <h2 className="heading">Роад Мапа обробки скарг</h2>
 
             <div className="timeline-items">
 

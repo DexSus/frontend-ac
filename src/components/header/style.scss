@@ -12,6 +12,7 @@
     z-index: 15;
 
     .logo {
+        font-family: 'Volja', sans-serif;
         font-size: 3rem;
         color: $text-color;
         font-weight: 800;
@@ -23,7 +24,7 @@
         }
 
         span {
-            text-shadow: 0 0 25px $main-color;
+            text-shadow: 0 0 25px #cd9346;
         }
     }
 
@@ -34,6 +35,7 @@
         }
 
         a {
+            font-family: 'UAF Sans', sans-serif;
             font-size: 1.8rem;
             color: $text-color;
             margin-left: 4rem;
@@ -41,8 +43,8 @@
             transition: .3s ease;
 
             &:hover, &.active {
-                color: $main-color;
-                border-bottom: 3px solid $main-color;
+                color: #cd9346;
+                border-bottom: 3px solid #cd9346;
             }
         }
     }

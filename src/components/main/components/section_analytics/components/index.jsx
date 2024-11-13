@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export const Frame = ( { sourth } ) => {
+export const Frame = ({text = "Кількість повідомлень за сьогодні:",  count = 54 }) => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsVisible(true);
+        }, 300); 
+    }, []);
 
     return (
-        <div className="frame-container">
-            <iframe 
-                src={sourth} 
-                height="500" 
-                width="500" 
-                frameborder="0"
-                title="Dash board">
-            </iframe>
+        <div className={`frame-container ${isVisible ? "visible" : ""}`}>
+            <div className="data-box">
+                <h2>{text}</h2>
+                <span className="count">{count}</span>
+            </div>
         </div>
     );
-}
+};

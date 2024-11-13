@@ -3,6 +3,70 @@
 @import './view/singIn/style.scss';
 @import './view/administrator/style.scss';
 
+@font-face {
+    font-family: 'Volja';
+    src: url('./fonts/Volja-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Volja';
+    src: url('./fonts/Volja-Black.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-NameTape.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-OnBoard.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UAF Sans';
+    src: url('./fonts/UAFSans-OnBoardStencil.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 html {
     font-size: 60%;
     overflow-x: hidden;
