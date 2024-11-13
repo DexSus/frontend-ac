@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import DiaPng from './images/dia.png';
 import BankIDPng from './images/bankID.png';
-import QRCodeDia from './images/qrcode_dia.png';
 import QRCodeBankID from './images/qrcode_bankid.png';
 
-export const AuthorizationForm = () => {
+export const AuthorizationForm = ( { QRCodeDia } ) => {
     const [selectedQRCode, setSelectedQRCode] = useState(null);
 
     const handleLogoClick = (qrCode) => {

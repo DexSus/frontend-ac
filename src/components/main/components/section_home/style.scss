@@ -1,6 +1,5 @@
 section {
     min-height: 90vh;
-    padding: 5rem 12% 10rem;
 }
 
 .home {
@@ -13,7 +12,7 @@ section {
     background-size: cover;
     background-position: right; 
     background-repeat: no-repeat; 
-
+    
 
     .home-content {
         display: flex;
@@ -22,8 +21,9 @@ section {
         
         justify-content: end;
         margin-top: 3rem;
-        margin-left: 70rem;
         color: white;
+        width: 100%;
+        padding-right: 5rem;
 
         h1 {
             font-family: 'Volja', sans-serif;
@@ -31,6 +31,7 @@ section {
             font-weight: 700;
             margin-top: 1.5rem;
             line-height: 1;
+            text-align: right;
         }
 
         h3 {

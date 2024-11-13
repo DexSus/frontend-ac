@@ -1,17 +1,18 @@
 .auth-container {
     width: 100%;
     height: 100vh;
-    background: rgb(62,137,238);
-    background: radial-gradient(circle, rgba(62,137,238,1) 0%, rgba(29,253,247,1) 50%, rgba(69,252,176,1) 100%);
+    background: rgb(120,122,124);
+    background: radial-gradient(circle, rgba(120,122,124,1) 0%, rgba(168,157,130,1) 49%, rgba(99,84,49,1) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Volja", sans-serif;
 
     .content {
         width: 30%;
         max-height: 500px;
-        background-color: rgb(255, 255, 255);
+        background-color: #F3EDDD;
         border-radius: 50px;
         display: flex;
         flex-direction: column;

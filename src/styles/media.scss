@@ -15,11 +15,17 @@
 
 @media (max-width:991px) {
     .header {
-        padding: 2rem 3%;
+        padding: 2rem;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 4rem;
     }
 
     section {
-        padding: 10rem 3% 2rem;
+        padding: 10rem 10% 2rem;
     }
 
     .timeline-items::before {
@@ -49,6 +55,7 @@
     .header {
         #menu-icon {
             display: block;
+            color: #D8C4A9;
         }
     }
 
@@ -59,11 +66,11 @@
         right: 0;
         width: 50%;
         padding: 1rem 3%;
-        background-color: rgba(0, 0, 0 , 0.8);
+        background-color: rgba(0, 0, 0, 0.36);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
-        border-left: 2px solid $main-color;
-        border-bottom: 2px solid $main-color;
+        border-left: 2px solid #D8C4A9;
+        border-bottom: 2px solid #D8C4A9;
 
         .active {
             display: block;
@@ -79,9 +86,11 @@
 
     .home {
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
 
         .home-content {
+            padding-right: 0;
+            justify-content: center;
+
 
             h1 {
                 font-size: 8rem;

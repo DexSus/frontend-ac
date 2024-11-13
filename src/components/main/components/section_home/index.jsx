@@ -1,7 +1,5 @@
 import React from "react";
 
-import HomePageImg  from './images/home-page.png';
-
 export const HomeSection = () => {
 
     return(
