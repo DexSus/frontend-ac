@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { AuthorizationForm } from "../../components/authorization/index";
 import { fetchImage } from "../../api/api.js";
-import { useNavigate } from "react-router-dom"; 
-import io from 'socket.io-client';
 
-const socket = io('http://localhost:3000');
 
 export const SingInPage = () => {
     const [imageSrc, setImageSrc] = useState(null);
-    
-    const navigate = useNavigate(); 
 
     useEffect(() => {
         const loadImage = async () => {
@@ -23,15 +18,22 @@ export const SingInPage = () => {
 
         loadImage();
 
-        socket.on('redirect', () => {
-            window.location.href = "/adminPanels"; 
-        });
-        
-    }, [navigate]);
+        const handleKeyDown = (event) => {
+            if (event.key === "Enter") {
+                window.location.href = "/adminPanels"; 
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
 
     return (
         <div>
-            {imageSrc ? <AuthorizationForm QRCodeDia={imageSrc}/> : "Завантаження..."}
+            {imageSrc ? <AuthorizationForm QRCodeDia={imageSrc} /> : "Завантаження..."}
         </div>
     );
 };

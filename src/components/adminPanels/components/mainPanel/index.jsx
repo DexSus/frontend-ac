@@ -3,19 +3,19 @@ import { AdminHeader } from "./components/adminHeader";
 
 import { Dashboard } from "./components/dashboard";
 import { AccountPanel } from "./components/account";
-import { AddCasePanel } from "./components/addCase";
+import { ViewPanel } from "./components/describe/index";
 import { CabinetPanel } from "./components/cabinet";
 
-export const MainPanel = ({ selectedPanel }) => { 
+export const MainPanel = ({ selectedPanel, selectedComplaint, onPanelChange }) => { 
 
     const renderContent = () => {
         switch (selectedPanel) {
             case "#Dashboard":
                 return <Dashboard/>;
             case "#AddCase":
-                return <AddCasePanel/>;
+                return <ViewPanel  onPanelChange={onPanelChange}/>;
             case "#Cabinet":
-                return <CabinetPanel/>;
+                return <CabinetPanel selectedComplaint={selectedComplaint}/>;
             case "#Account":
                 return <AccountPanel progressValue={70}/>;
             default:

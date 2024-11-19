@@ -10,9 +10,9 @@ export const SourcesDoughnutChart = () => {
         datasets: [
             {
                 label: "Отримано повідомлень",
-                data: [17, 4, 33], 
-                backgroundColor: ["#36A2EB", "#4BC0C0", "#FF6384"],
-                hoverBackgroundColor: ["#36A2EB90", "#4BC0C090", "#FF638490"],
+                data: [17, 4, 33],
+                backgroundColor: ["#E4CDA7", "#D6A676", "#A3795B"], 
+                hoverBackgroundColor: ["#E4CDA7AA", "#D6A676AA", "#A3795BAA"], 
                 borderWidth: 1,
             },
         ],
@@ -23,14 +23,28 @@ export const SourcesDoughnutChart = () => {
         plugins: {
             legend: {
                 position: "top",
+                labels: {
+                    font: {
+                        family: 'UAF Sans', 
+                        size: 14,
+                    },
+                },
             },
             tooltip: {
                 enabled: true,
+                bodyFont: {
+                    family: 'UAF Sans', 
+                },
             },
         },
         animation: {
             animateScale: true,
-            animateRotate: true, 
+            animateRotate: true,
+        },
+        elements: {
+            arc: {
+                borderWidth: 2,
+            },
         },
     };
 

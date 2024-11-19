@@ -9,7 +9,7 @@ export const AdminHeader = () => {
         <header className="adminHeader">
             <div className="profile-container">
                 <img src={ defoltUserPhoto } alt="user photo" />
-                <p>Ібрагім Зеленко</p>
+                <p>Надія Дія</p>
             </div>
         </header>
     );

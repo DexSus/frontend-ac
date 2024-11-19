@@ -5,10 +5,10 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <div className="social">
-                <a href="#Telegram"><i class='bx bxl-telegram' ></i></a>
-                <a href="#WhatsApp"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="#Signal"><i class='bx bx-message-rounded' ></i></a>
-                <a href="#Viber"><i class='bx bx-phone-call'></i></a>
+                <a href="#Telegram"><i className='bx bxl-telegram' ></i></a>
+                <a href="#WhatsApp"><i className='bx bxl-whatsapp' ></i></a>
+                <a href="#Signal"><i className='bx bx-message-rounded' ></i></a>
+                <a href="#Viber"><i className='bx bx-phone-call'></i></a>
             </div>
 
             <ul className="list">

@@ -2,26 +2,34 @@
     background-color: №545;
     max-width: 500px;
     width: 100%;
-    height: 350px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
     transition: .4s ease-in-out;
     color: #f5e6d3;
     font-family: 'UAF Sans', sans-serif;
+    overflow: hidden; 
+    transition: height .4s ease-in-out;
 
     &:hover {
         background-color: white;
         color: #6F6655;
         box-shadow: 0 0 10px #D8C4A9;
         transform: scale(1.03);
+        height: auto;
+
+        & .question-info {
+            & p {
+                display: block;
+            }
+        }
     }
 
     & .question-info {
         display: flex;
         flex-direction: column;
         text-align: left;
-        max-height: 350px;
+        max-height: 750px;
         justify-content: left;
         align-items: baseline;
         padding: 5rem;
@@ -29,15 +37,15 @@
         & h4 {
             font-size: 3rem;
             font-weight: 800;
-            line-height: 2;
+            line-height: 1;
         }
 
         & p {
+            display: none;
             font-size: 1.6rem;
             font-weight: 600;
-            max-height: 300px;
             line-height: 1.7;
-            margin: auto;
+            margin: 1rem auto;
         }
     }
 }

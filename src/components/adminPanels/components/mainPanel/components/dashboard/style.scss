@@ -1,25 +1,31 @@
 @import './components/card/style.scss';
 @import './components/charts/style.scss';
 @import './components/doughnut/style.scss';
+@import './components/map/style.scss';
+@import './components/Top/style.scss';
+
 
 .dashboard-container {
     width: 100%;
     max-height: 90vh;
     height: 100%;
     overflow-y: auto;
+    background-color: #F4EDE2; 
 
     .dashboard-preview {
         padding: 2rem;
-        
+
         & p {
-            letter-spacing: .125rem;
-            color: #818ea3;
+            font-family: 'UAF Sans', sans-serif;
+            letter-spacing: 0.125rem;
+            color: #9E8B75; 
             font-size: 2rem;
             margin-bottom: 2rem;
         }
 
         & h1 {
-            color: #3d5170;
+            font-family: 'Volja', sans-serif;
+            color: #4D3E34; 
             font-size: 3rem;
             font-weight: 500;
             line-height: 1;
@@ -28,21 +34,18 @@
         }
     }
 
-    .dashboard-cards-container {
+    .dashboard-cards-container, .dashboard-charts-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 40px;
-
         margin-top: 10px;
+        padding: 1rem;
+        border-radius: 8px;
     }
 
-    .dashboard-charts-container {
+    .dashboard-top-of {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 40px;
-
-        margin-top: 10px;
+        width: 100%;
     }
 }

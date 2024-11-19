@@ -1,19 +1,128 @@
 .account-preview {
     padding: 2rem;
 
-    & p {
+    p {
+        font-family: 'UAF Sans', sans-serif;
         letter-spacing: .125rem;
-        color: #818ea3;
+        color: #cb822e;
         font-size: 2rem;
         margin-bottom: 2rem;
     }
 
-    & h1 {
-        color: #3d5170;
-        font-size: 3rem;
-        font-weight: 500;
-        line-height: 1;
+    h1 {
+        font-family: 'Volja', sans-serif;
+        color: #4D3E34;
+        font-size: 3.2rem;
+        font-weight: 600;
         margin: 0;
-        padding: 0;
     }
+}
+
+.complaint-card {
+    margin: 2rem auto;
+    background-color: #f5f2ed;
+    padding: 2.5rem;
+    border: 1px solid #9E8B75;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #4D3E34;
+    font-family: 'UAF Sans', sans-serif;
+    max-width: 600px;
+    text-align: left;
+}
+
+.complaint-card h2 {
+    color: #4D3E34;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.complaint-card p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #4D3E34;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+.complaint-card a {
+    color: #9E8B75;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.complaint-card a:hover {
+    color: #4D3E34;
+}
+
+.investigation-form {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.files-storage {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    ul {
+    
+        li {
+            margin: 0.5rem;
+        }
+    }
+}
+
+.investigation-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #9E8B75;
+    font-size: 1.4rem;
+    max-width: 100%;
+}
+
+.investigation-form input[type="text"],
+.investigation-form select {
+    max-width: 60%;
+    width: 100%;
+    margin-left: 15px;
+    padding: 1rem;
+    border: 1px solid #9E8B75;
+    border-radius: 5px;
+    background-color: #f9f7f4;
+    color: #4D3E34;
+    font-size: 1.4rem;
+    font-family: 'UAF Sans', sans-serif;
+}
+
+.investigation-form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.investigation-form button {
+    background-color: #4D3E34;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-family: 'UAF Sans', sans-serif;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.investigation-form button:hover {
+    background-color: #9E8B75;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.investigation-form button:active {
+    transform: scale(0.98);
 }

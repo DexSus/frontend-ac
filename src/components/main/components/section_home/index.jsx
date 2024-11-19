@@ -5,19 +5,16 @@ export const HomeSection = () => {
     return(
         <section className="home" id="home">
             <div className="home-content">
-                <h1>Lorem ipsum</h1>
-                <h3 className="text-animation">Lorem ipsum</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Error deserunt, adipisci, expedita cumque ad dicta soluta quos 
-                    praesentium eaque illum quo odio incidunt obcaecati sapiente dolorem. 
-                    Debitis et tempore qui?
+                <h1>CATS</h1>
+                <h3 className="text-animation">Corruption Assessment and Transparency System</h3>
+                <p>Департамент з питань запобігання та виявлення корупції Міністерства оборони України є ключовим органом, спрямованим на забезпечення прозорості та підзвітності в оборонному секторі. Наша місія – створити ефективні механізми боротьби з корупцією, забезпечити моніторинг і контроль за дотриманням антикорупційних стандартів, а також надати можливість громадянам повідомляти про випадки корупційної діяльності.
                 </p>
 
                 <div className="social-icons">
-                    <a href="#Telegram"><i class='bx bxl-telegram' ></i></a>
-                    <a href="#WhatsApp"><i class='bx bxl-whatsapp' ></i></a>
-                    <a href="#Signal"><i class='bx bx-message-rounded' ></i></a>
-                    <a href="#Viber"><i class='bx bx-phone-call'></i></a>
+                    <a href="https://t.me/Aisher36" target="blank"><i className='bx bxl-telegram' ></i></a>
+                    <a href="https://wa.me/380685676800" target="blank"><i className='bx bxl-whatsapp' ></i></a>
+                    <a href="#Signal"><i className='bx bx-message-rounded' ></i></a>
+                    <a href="#Viber"><i className='bx bx-phone-call'></i></a>
                 </div>
 
                 <div className="btn-group">

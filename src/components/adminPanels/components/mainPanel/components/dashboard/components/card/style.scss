@@ -2,45 +2,48 @@
     max-width: 200px;
     width: 100%;
     height: auto;
-    color: #3D5170;
+    color: #4D3E34;  
     text-align: center;
     padding: 1rem 2rem;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);  
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FAF3E0;  
 
     & h1 {
+        font-family: 'UAF Sans', sans-serif;
         font-size: 1.7rem;
         padding: 1rem;
-        opacity: 1;
+        opacity: 0.9;
     }
 
     & p {
+        font-family: 'UAF Sans', sans-serif;
         font-size: 4.5rem;
         padding: 1rem;
-        opacity: 1;
+        opacity: 0.9;
     }
 }
 
 .last-month {
-    background-color: rgba(244, 114, 28, 0.436);
+    background-color: rgba(234, 190, 135, 0.8);  
 }
 
 .last-day {
-    background-color: rgba(226, 244, 28, 0.436);
+    background-color: rgba(244, 229, 192, 0.8);  
 }
 
 .now {
-    background-color: rgba(28, 244, 57, 0.436);
+    background-color: rgba(208, 244, 204, 0.8);  
 }
 
 .closed {
-    background-color: rgba(28, 219, 244, 0.436);
+    background-color: rgba(190, 227, 242, 0.8);  
 }
 
 .un-read {
-    background-color: rgba(244, 28, 28, 0.436);
+    background-color: rgba(244, 186, 186, 0.8); 
 }

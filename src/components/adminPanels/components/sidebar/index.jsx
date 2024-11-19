@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "./images/logo.png";
+import logo from "./images/logo-black.png";
 
 export const SideBar = ({ onSelectPanel }) => { 
     const [activeItem, setActiveItem] = useState("#Dashboard"); 
@@ -23,7 +23,7 @@ export const SideBar = ({ onSelectPanel }) => {
                             href="#Dashboard" 
                             onClick={() => handleNavClick("#Dashboard")}
                         >
-                            <i className='bx bxs-dashboard'></i>Dashboard
+                            <i className='bx bxs-dashboard'></i>Аналітика
                         </a>
                     </li>
                     <li>
@@ -32,25 +32,17 @@ export const SideBar = ({ onSelectPanel }) => {
                             href="#AddCase" 
                             onClick={() => handleNavClick("#AddCase")}
                         >
-                            <i className='bx bxs-add-to-queue'></i>Add Case
+                            <i className='bx bxs-add-to-queue'></i>Переглянути
                         </a>
                     </li>
-                    <li>
-                        <a 
-                            className={`nav-btn ${activeItem === "#Cabinet" ? "active" : ""}`} 
-                            href="#Cabinet" 
-                            onClick={() => handleNavClick("#Cabinet")}
-                        >
-                            <i className='bx bx-cabinet'></i>Cabinet
-                        </a>
-                    </li>
+                    
                     <li>
                         <a 
                             className={`nav-btn ${activeItem === "#Account" ? "active" : ""}`} 
                             href="#Account" 
                             onClick={() => handleNavClick("#Account")}
                         >
-                            <i className='bx bx-user'></i>User Account
+                            <i className='bx bx-user'></i>Акаунт
                         </a>
                     </li>
                 </ul>

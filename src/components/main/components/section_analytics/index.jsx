@@ -9,11 +9,11 @@ export const AnalyticsSection = () => {
             <h2 className="heading">Трішки цифр</h2>
 
             <div className="charts-container">
-                <Frame />
-                <Frame />
-                <Frame />
-                <Frame />
-                <Frame />
+                <Frame text={"Кількість повідомлень за останній місяць"} count={5416} />
+                <Frame text={"Кількість повідомлень за вчора"} count={156} />
+                <Frame text={"Кількість повідомлень за сьогодні"} count={62} />
+                <Frame text={"Кількість закритих справ"} count={2026} />
+                <Frame text={"Кількість справ, що розглядаються"} count={9544} />
             </div>
         </section>
     );

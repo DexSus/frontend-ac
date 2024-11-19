@@ -6,5 +6,61 @@
     background-color: #635431;
     border: none;
     margin: 0;
-    padding: 2rem;
+    padding: 2.5rem 2rem 2rem;
+    gap: 15px;
+    
+
+    .sponsor-1 {
+        max-width: 350px;
+        
+    }
+
+    .sponsor-2 {
+        width: 350px;
+    }
+
+    .sponsor-3 {
+        width: 350px;
+    }
+
+    .sponsor-4 {
+        width: 350px;
+    }
+
+    .jam {
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: 'UAF Sans', sans-serif;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        
+        .sponsor-4 {
+            width: 170px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 5rem;
+                font-family: 'UAF Sans', sans-serif;
+                font-weight: 500;
+                padding-bottom: 7px;
+            }
+    
+            h2 {
+                font-size: 1.8rem;
+                font-family: 'UAF Sans', sans-serif;
+                font-weight: 500;
+                padding-bottom: 0px;
+                letter-spacing: 1.2px;
+                width: 150px;
+                line-height: 21px;
+            }
+        }
+    }
+    
 }

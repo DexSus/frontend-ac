@@ -48,8 +48,8 @@ export const AccountPanel = () => {
             <div className="account-settings">
                 <div className="account-view">
                     <img className="profile-photo" src={defoltUserPhoto} alt="profile photo" />
-                    <h2 className="data">Ібрагім Зеленко</h2>
-                    <p className="role">Детектив</p>
+                    <h2 className="data">Надія Дія</h2>
+                    <p className="role">Адміністратор</p>
                     <div className="account-info">
                         <h3>Завантаженість роботою</h3>
                         <div

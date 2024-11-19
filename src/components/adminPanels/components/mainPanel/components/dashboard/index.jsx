@@ -3,10 +3,16 @@ import React from "react";
 import { DashboardCard } from './components/card/index';
 import { MessagesChart } from "./components/charts/index";
 import { SourcesDoughnutChart } from "./components/doughnut/index";
+import { Map } from "./components/map/index";
+import { Top5BarChart } from "./components/Top/index";
+import { CorruptionParticipantsChart } from "./components/Bar/index";
 
 export const Dashboard = () => {
 
     const hourlyMessages = [1, 3, 4, 2, 3, 5, 4, 1, 3, 7, 5, 6, 2, 2, 7, 2, 1, 1, 1, 2];
+
+    const labels = ["BITI", "A5225", "A4239", "A1254", " A1247"];
+    const data = [35, 20, 15, 10, 5];
 
 
     return (
@@ -25,6 +31,13 @@ export const Dashboard = () => {
             <div className="dashboard-charts-container">
                 <MessagesChart data={hourlyMessages} />
                 <SourcesDoughnutChart/>
+            </div>
+            <div className="dashboard-map">
+                <Map/>
+            </div>
+            <div className="dashboard-top-of">
+                <Top5BarChart labels={labels} data={data}/>
+                <CorruptionParticipantsChart/>
             </div>
         </div>
     );

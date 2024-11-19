@@ -14,6 +14,9 @@ export const MessagesChart = ({ data }) => {
             title: {
                 display: true,
                 text: 'Статистика надходження повідомлень',
+                font: {
+                    family: 'UAF Sans', 
+                },
             },
         },
         scales: {
@@ -21,12 +24,18 @@ export const MessagesChart = ({ data }) => {
                 title: {
                     display: true,
                     text: 'Час (Години)',
+                    font: {
+                        family: 'UAF Sans', 
+                    },
                 },
             },
             y: {
                 title: {
                     display: true,
                     text: 'Кількість повідомлень',
+                    font: {
+                        family: 'UAF Sans', 
+                    },
                 },
             },
         },
@@ -36,11 +45,14 @@ export const MessagesChart = ({ data }) => {
         labels: Array.from({ length: 24 }, (_, i) => `${i}:00`), 
         datasets: [
             {
-                label: 'Отриманні повідомлення',
+                label: 'Отримані повідомлення',
                 data: data, 
-                borderColor: 'rgb(75, 192, 192)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: '#A3795B', 
+                backgroundColor: 'rgba(163, 121, 91, 0.2)', 
                 tension: 0.4,
+                font: {
+                    family: 'UAF Sans', 
+                },
             },
         ],
     };

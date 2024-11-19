@@ -1,6 +1,6 @@
 export const fetchImage = async () => {
     try {
-        const response = await fetch("http://26.36.232.140:8080/api/v1/login/dia/auth", {
+        const response = await fetch("http://192.168.10.179:8080/api/v1/login/dia/auth", {
             method: 'GET',
             headers: {
                 "Accept": "application/json"

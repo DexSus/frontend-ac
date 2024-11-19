@@ -1,7 +1,7 @@
 @import './components/adminHeader/style.scss';
 
 @import './components/dashboard/style.scss';
-@import './components/addCase/style.scss';
+@import './components/describe/style.scss';
 @import './components/cabinet/style.scss';
 @import './components/account/style.scss';
 
@@ -13,5 +13,6 @@
         max-height: 90vh;
         height: 100%;
         overflow-y: auto;
+        background-color: #F4EDE2;
     }
 }
