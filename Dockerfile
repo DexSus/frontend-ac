@@ -1,11 +1,13 @@
-# Базовий образ
-FROM nginx:alpine
+FROM node:18-alpine
 
-# Копіюємо production build до nginx
-COPY build /usr/share/nginx/html
+WORKDIR /app
 
-# Експонуємо порт 80
-EXPOSE 80
+COPY package*.json ./
 
-# Запускаємо nginx
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
