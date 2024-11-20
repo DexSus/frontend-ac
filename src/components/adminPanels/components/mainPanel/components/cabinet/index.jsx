@@ -24,6 +24,33 @@ export const CabinetPanel = ({ selectedComplaint }) => {
         });
     };
 
+    const decodeBase64 = (base64String) => {
+        const cleanBase64String = base64String.replace(/^data:.+;base64,/, "");
+    
+        try {
+            const binaryString = atob(cleanBase64String); 
+            const bytes = new Uint8Array(binaryString.length);
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return new Blob([bytes], { type: "application/octet-stream" }); 
+        } catch (error) {
+            console.error("Error decoding Base64 string:", error);
+            return null; 
+        }
+    };
+    
+
+    const generateFileURL = (file) => {
+
+            const blob = decodeBase64(file.base64); 
+
+            console.log(blob);
+            
+            return URL.createObjectURL(blob); 
+        
+    };
+
     return (
         <>
             <div className="account-preview">
@@ -44,7 +71,13 @@ export const CabinetPanel = ({ selectedComplaint }) => {
                         <ul>
                             {selectedComplaint.files.map((file, index) => (
                                 <li key={index}>
-                                    <a href={file.url} target="_blank" rel="noopener noreferrer">{file.name}</a>
+                                    <a
+                                        href={generateFileURL(file)} 
+                                        download={file.name} 
+                                        rel="noopener noreferrer"
+                                    >
+                                        Доказ {index + 1}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -57,7 +90,7 @@ export const CabinetPanel = ({ selectedComplaint }) => {
                                 className="article-number"
                                 type="text"
                                 value={articleNumber}
-                                onChange={(e) => setArticleNumber(e.target.value)} // доданий обробник onChange
+                                onChange={(e) => setArticleNumber(e.target.value)} 
                             />
                         </label>
 

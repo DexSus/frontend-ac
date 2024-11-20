@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';  
+import { saveMessage } from '../../../../api/api.js';
 
 export const FormSection = () => {
     const fileInputRef = useRef(null);
@@ -27,14 +28,52 @@ export const FormSection = () => {
     };
 
     const generateTrackingNumber = () => {
-        const uid = uuidv4(); // Генерація унікального UUID
+        const uid = uuidv4(); 
         setTrackingNumber(uid);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // щоб не відправляти форму
-        generateTrackingNumber();
-        setIsModalOpen(true);
+    const convertToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file); 
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = (error) => reject(error);
+        });
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        console.log(event.preventDefault());
+        
+
+        try {
+            generateTrackingNumber();
+
+            const base64Files = await Promise.all(
+                files.map((file) => convertToBase64(file).then((base64) => ({ base64 })))
+            );
+
+            const payload = {
+                uuidv4: trackingNumber,
+                organization: event.target[0].value, 
+                person: event.target[1].value, 
+                source: event.target[2].value, 
+                location: event.target[3].value, 
+                status: "Нове", 
+                details: event.target[4].value, 
+                files: base64Files, 
+            };
+
+            console.log(payload);
+            
+
+            await saveMessage(payload);
+
+            setIsModalOpen(true);
+        } catch (error) {
+            console.error("Помилка збереження даних: ", error);
+        }
     };
 
     const closeModal = () => {

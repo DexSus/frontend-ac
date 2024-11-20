@@ -33,7 +33,8 @@ export const SingInPage = () => {
 
     return (
         <div>
-            {imageSrc ? <AuthorizationForm QRCodeDia={imageSrc} /> : "Завантаження..."}
+            {/* {imageSrc ? <AuthorizationForm QRCodeDia={imageSrc} /> : "Завантаження..."} */}
+            <AuthorizationForm QRCodeDia={imageSrc} /> 
         </div>
     );
 };

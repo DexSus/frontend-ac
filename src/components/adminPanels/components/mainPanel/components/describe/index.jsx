@@ -1,142 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Button, Input, Space, Table } from "antd";
 import Highlighter from "react-highlight-words";
 
-export const ViewPanel = ({ onPanelChange }) => {
+import { fetchDataFromElastic } from '../../../../../../api/api.js';
 
-    const data = [
-        {
-          key: "1",
-          organization: "Військова частина А1234",
-          person: "Петренко Андрій Миколайович",
-          source: "Веб Сайт",
-          location: "Київ",
-          status: "Нове",
-          details: "Начальник військової частини А1234 запропонував мені 300$ за те, що я, як начальник РАО, спишу 2 ящика БК, як наслідок пожежі на складі. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "2",
-          organization: "Військова частина Б5678",
-          person: "Сидоренко Олег Володимирович",
-          source: "Telegram",
-          location: "Львів",
-          status: "В обробці",
-          details: "Командир військової частини Б5678 запропонував мені вирішити питання з постачанням паливно-мастильних матеріалів без тендера за певну винагороду. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "3",
-          organization: "Військова частина В9101",
-          person: "Коваленко Світлана Олексіївна",
-          source: "WatsApp",
-          location: "Харків",
-          status: "Закрито",
-          details: "Під час перевірки виявлено, що співробітники військової частини В9101 використовували службову техніку для особистих потреб. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "4",
-          organization: "Військова частина Г1122",
-          person: "Лисенко Вікторія Сергіївна",
-          source: "WatsApp",
-          location: "Одеса",
-          status: "Нове",
-          details: "Командир частини Г1122 запропонував мені закрити очі на порушення в бухгалтерії за умови співпраці. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "5",
-          organization: "Військова частина Д3344",
-          person: "Дмитренко Іван Сергійович",
-          source: "Веб Сайт",
-          location: "Дніпро",
-          status: "Розглядається",
-          details: "Командир частини Д3344 намагався здійснити вплив на рішення щодо постачання медикаментів в частину за вигіднішими умовами для певного постачальника. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "6",
-          organization: "Військова частина Е5566",
-          person: "Захарченко Олександр Іванович",
-          source: "Telegram",
-          location: "Запоріжжя",
-          status: "Закрито",
-          details: "У військовій частині Е5566 було виявлено неправомірні дії при закупівлі запчастин для техніки, де було задіяно службові кошти. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "7",
-          organization: "Військова частина Ж7788",
-          person: "Іванчук Марія Григорівна",
-          source: "WatsApp",
-          location: "Київ",
-          status: "В обробці",
-          details: "Під час обстеження військової частини Ж7788 було виявлено значні порушення при складанні звітів про використання паливно-мастильних матеріалів. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "8",
-          organization: "Військова частина З9900",
-          person: "Ковальчук Юрій Володимирович",
-          source: "Telegram",
-          location: "Луцьк",
-          status: "Нове",
-          details: "Начальник військової частини З9900 намагався маніпулювати даними під час перевірки щодо витрат на обслуговування техніки. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "9",
-          organization: "Військова частина И1122",
-          person: "Семенюк Ірина Валентинівна",
-          source: "Веб Сайт",
-          location: "Миколаїв",
-          status: "Розглядається",
-          details: "Під час перевірки було виявлено, що співробітники військової частини И1122 використовували спеціальні ресурси для приватних цілей, що є порушенням. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        },
-        {
-          key: "10",
-          organization: "Військова частина І3344",
-          person: "Гончаренко Михайло Андрійович",
-          source: "Telegram",
-          location: "Чернігів",
-          status: "В обробці",
-          details: "Командир військової частини І3344 пропонував мені заплатити хабар за те, щоб не виявляти порушення в звіті про використання бюджетних коштів. Звіт аудиту та Фото доказу додаються.",
-          files: [
-            { name: "Звіт аудиту", url: "/files/report.pdf" },
-            { name: "Фото доказу", url: "/files/evidence.jpg" },
-          ]
-        }
-      ];
+export const ViewPanel = ({ onPanelChange }) => {
+  const [dataTest, setDataTest] = useState([]);
+  const [loading, setLoading] = useState(true); 
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await fetchDataFromElastic(); 
+        setDataTest(result); 
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false); 
+      }
+    };
+    fetchData();
+  }, []);
       
 
   const [selectedComplaint, setSelectedComplaint] = useState(null);
@@ -304,7 +190,7 @@ export const ViewPanel = ({ onPanelChange }) => {
         <div className="panel-container">
             <Table
             columns={columns}
-            dataSource={data}
+            dataSource={dataTest}
             onRow={(record) => ({
                 onClick: () => setSelectedComplaint(record),
             })}
@@ -348,25 +234,27 @@ export const ViewPanel = ({ onPanelChange }) => {
                         {selectedComplaint.details || "Немає додаткової інформації"}
                         </p>
                     </div>
-                    {selectedComplaint.files &&
-                        selectedComplaint.files.length > 0 && (
-                        <div className="detail-item">
-                            <h3>Файли:</h3>
-                            <ul>
-                            {selectedComplaint.files.map((file, index) => (
-                                <li key={index}>
-                                <a
-                                    href={file.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {file.name}
-                                </a>
-                                </li>
-                            ))}
-                            </ul>
-                        </div>
-                    )}
+                    {selectedComplaint.files && selectedComplaint.files.length > 0 ? (
+                      <div className="detail-item">
+                          <h3>Файли:</h3>
+                          <p>Присутні, перейдіть до детальної інформації</p>
+                          <ul>
+                              {selectedComplaint.files.map((file, index) => (
+                                  <li key={index}>
+                                      <a
+                                          href={file.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                      >
+                                          {file.name}
+                                      </a>
+                                  </li>
+                              ))}
+                          </ul>
+                      </div>
+                  ) : (
+                      <p>Файли відсутні.</p>
+                  )}
                     <div className="btn-item">
                     <a href="#Cabinet" onClick={handleComplaintClick}>Опрацювати...</a>
                     </div>

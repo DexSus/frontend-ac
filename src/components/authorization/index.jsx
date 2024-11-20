@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DiaPng from './images/dia.png';
 import BankIDPng from './images/bankID.png';
 import QRCodeBankID from './images/qrcode_bankid.png';
+import QRCodeDiia from './images/qrcode_dia.png';
 
 export const AuthorizationForm = ( { QRCodeDia } ) => {
     const [selectedQRCode, setSelectedQRCode] = useState(null);
@@ -22,7 +23,7 @@ export const AuthorizationForm = ( { QRCodeDia } ) => {
                         className='logo' 
                         src={DiaPng} 
                         alt="Дія" 
-                        onClick={() => handleLogoClick(QRCodeDia)} 
+                        onClick={() => handleLogoClick(QRCodeDiia)} 
                     />
                     <img 
                         className='logo' 
